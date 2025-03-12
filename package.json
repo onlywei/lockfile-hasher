@@ -12,7 +12,7 @@
   "scripts": {
     "build": "rm -rf dist && tsc",
     "check-format": "biome check .",
-    "ci": "pnpm run test && pnpm run check-format",
+    "ci": "pnpm run test && pnpm run check-format && pnpm run build",
     "format": "biome check --write .",
     "prepublishOnly": "pnpm run ci",
     "test": "node --experimental-strip-types --test"
