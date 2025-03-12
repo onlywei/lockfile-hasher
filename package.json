@@ -1,6 +1,6 @@
 {
   "name": "lockfile-hasher",
-  "version": "1.0.2",
+  "version": "1.1.0",
   "description": "Generates a combined hash of all the lockfiles in a repository",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",

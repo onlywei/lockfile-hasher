@@ -1,5 +1,11 @@
 # lockfile-hasher
 
+## 1.1.0
+
+### Minor Changes
+
+- b4c160a: Allow default export for easier mocking
+
 ## 1.0.2
 
 ### Patch Changes
