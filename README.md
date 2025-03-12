@@ -15,7 +15,7 @@ npm install lockfile-hasher
 ```js
 import { generateCombinedLockFileHash } from 'lockfile-hasher';
 
-const combinedHash = generateCombinedLockfileHash(pathToRepositoryRoot);
+const combinedHash = generateCombinedLockFileHash(pathToRepositoryRoot);
 ```
 
 Alternatively, you can use the default export. This allows for easier mocking, since hashing lockfiles is an expensive operation that you really don't want to do during unit tests:
@@ -23,5 +23,5 @@ Alternatively, you can use the default export. This allows for easier mocking, s
 ```js
 import lockfileHasher from 'lockfile-hasher';
 
-const combinedHash = lockfileHasher.generateCombinedLockfileHash(pathToRepositoryRoot);
+const combinedHash = lockfileHasher.generateCombinedLockFileHash(pathToRepositoryRoot);
 ```
