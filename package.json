@@ -1,0 +1,41 @@
+{
+  "name": "lockfile-hasher",
+  "version": "0.1.0",
+  "description": "Generates a combined hash of all the lockfiles in a repository",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "type": "module",
+  "packageManager": "pnpm@10.6.2",
+  "scripts": {
+    "build": "rm -rf dist && tsc",
+    "check-format": "biome check .",
+    "ci": "pnpm run test && pnpm run check-format",
+    "format": "biome check --write .",
+    "prepublishOnly": "pnpm run ci",
+    "test": "pnpm run build && node --experimental-strip-types --test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/onlywei/lockfile-hasher.git"
+  },
+  "keywords": [
+    "gitlab"
+  ],
+  "author": "Wei Wang <wei@fastmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/onlywei/lockfile-hasher/issues"
+  },
+  "homepage": "https://github.com/onlywei/lockfile-hasher#readme",
+  "devDependencies": {
+    "@biomejs/biome": "^1.9.4",
+    "@changesets/cli": "^2.28.0",
+    "@types/node": "^22.13.4",
+    "typescript": "^5.8.2"
+  },
+  "pnpm": {
+    "onlyBuiltDependencies": [
+      "@biomejs/biome"
+    ]
+  }
+}
