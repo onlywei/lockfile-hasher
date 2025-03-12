@@ -17,3 +17,11 @@ import { generateCombinedLockFileHash } from 'lockfile-hasher';
 
 const combinedHash = generateCombinedLockfileHash(pathToRepositoryRoot);
 ```
+
+Alternatively, you can use the default export. This allows for easier mocking, since hashing lockfiles is an expensive operation that you really don't want to do during unit tests:
+
+```js
+import lockfileHasher from 'lockfile-hasher';
+
+const combinedHash = lockfileHasher.generateCombinedLockfileHash(pathToRepositoryRoot);
+```

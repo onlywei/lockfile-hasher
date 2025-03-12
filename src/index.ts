@@ -38,3 +38,7 @@ export async function generateCombinedLockFileHash(rootPath: string): Promise<st
   // Generate a new hash from the combined string
   return crypto.createHash('sha256').update(combinedString).digest('hex');
 }
+
+export default {
+	generateCombinedLockFileHash,
+};
