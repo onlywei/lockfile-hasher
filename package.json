@@ -6,13 +6,16 @@
   "types": "dist/index.d.ts",
   "type": "module",
   "packageManager": "pnpm@10.6.2",
+  "files": [
+    "dist"
+  ],
   "scripts": {
     "build": "rm -rf dist && tsc",
     "check-format": "biome check .",
     "ci": "pnpm run test && pnpm run check-format",
     "format": "biome check --write .",
     "prepublishOnly": "pnpm run ci",
-    "test": "pnpm run build && node --experimental-strip-types --test"
+    "test": "node --experimental-strip-types --test"
   },
   "repository": {
     "type": "git",
@@ -37,5 +40,8 @@
     "onlyBuiltDependencies": [
       "@biomejs/biome"
     ]
+  },
+  "dependencies": {
+    "glob": "^11.0.1"
   }
 }
