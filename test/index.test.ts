@@ -26,7 +26,7 @@ describe('generatePackageLockHash', () => {
     assert.strictEqual(hash1, hash2);
   });
 
-  it('allows mocking the method using node\'s built in mocking system', async (t) => {
+  it("allows mocking the method using node's built in mocking system", async (t) => {
     t.mock.method(lockfileHasher, 'generateCombinedLockFileHash', async () => 'mocked-hash');
     const hash = await lockfileHasher.generateCombinedLockFileHash(fakeTestRepoDir);
     assert.strictEqual(hash, 'mocked-hash');

@@ -40,5 +40,5 @@ export async function generateCombinedLockFileHash(rootPath: string): Promise<st
 }
 
 export default {
-	generateCombinedLockFileHash,
+  generateCombinedLockFileHash,
 };
