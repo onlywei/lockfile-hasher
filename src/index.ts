@@ -1,24 +1,20 @@
-// hash-package-locks.js
 import crypto from 'node:crypto';
 import { readFile } from 'node:fs/promises';
 import path from 'node:path';
 import { glob } from 'glob';
 
-type LockFileName = 'package-lock.json' | 'pnpm-lock.yaml' | 'yarn.lock';
+const GLOB_PATTERNS = ['**/package-lock.json', '**/yarn.lock', '**/pnpm-lock.yaml'];
+const GLOB_OPTIONS = { ignore: '**/node_modules/**' };
 
 /**
  * Generate a combined hash of all lock files in a repo.
  * @param {string} rootPath - Root path of the repository
- * @param {LockFileName} lockFileName - Name of the lock file to search for.
- *     Currently supports 'package-lock.json', 'pnpm-lock.yaml', and 'yarn.lock'
  * @returns {Promise<string>} - Combined hash string
  */
-export async function generateCombinedLockFileHash(
-  rootPath: string,
-  lockFileName: LockFileName,
-): Promise<string> {
-  const pattern = path.join(rootPath, `**/${lockFileName}`);
-  const files = await glob(pattern, { ignore: '**/node_modules/**' });
+export async function generateCombinedLockFileHash(rootPath: string): Promise<string> {
+  const files = await Promise.all(
+    GLOB_PATTERNS.map((pattern) => glob(path.join(rootPath, pattern), GLOB_OPTIONS)),
+  ).then((results) => results.flat());
   const fileContents = await Promise.all(files.map((file) => readFile(file)));
 
   // Generate hash for each file

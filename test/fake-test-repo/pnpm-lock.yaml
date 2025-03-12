@@ -1,0 +1,17 @@
+lockfileVersion: '9.0'
+
+settings:
+  autoInstallPeers: true
+  excludeLinksFromLockfile: false
+
+importers:
+
+  .:
+    dependencies:
+      some-fake-package: 
+        specifier: ^12.20.55
+        version: 12.20.55
+
+packages:
+
+  some-fake-package@12.20.55: {}
