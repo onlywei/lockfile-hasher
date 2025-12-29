@@ -1,5 +1,11 @@
 # lockfile-hasher
 
+## 1.1.3
+
+### Patch Changes
+
+- ac9a973: Use Node v24 in CI
+
 ## 1.1.2
 
 ### Patch Changes
