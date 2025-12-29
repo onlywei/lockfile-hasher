@@ -1,5 +1,11 @@
 # lockfile-hasher
 
+## 1.1.2
+
+### Patch Changes
+
+- 8b6fa08: Upgrade pnpm to 10.26.2
+
 ## 1.1.1
 
 ### Patch Changes
