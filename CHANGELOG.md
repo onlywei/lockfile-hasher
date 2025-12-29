@@ -1,5 +1,11 @@
 # lockfile-hasher
 
+## 1.1.4
+
+### Patch Changes
+
+- 2be9d5b: Upgrade all dependencies
+
 ## 1.1.3
 
 ### Patch Changes
