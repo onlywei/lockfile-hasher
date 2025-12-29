@@ -1,5 +1,12 @@
 # lockfile-hasher
 
+## 1.1.5
+
+### Patch Changes
+
+- fde82a1: Remove empty NPM_TOKEN from release.yaml
+- fde82a1: Upgrade all dependencies
+
 ## 1.1.4
 
 ### Patch Changes
