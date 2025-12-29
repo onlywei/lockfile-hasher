@@ -1,5 +1,11 @@
 # lockfile-hasher
 
+## 1.1.1
+
+### Patch Changes
+
+- 31c644e: Switch to npm trusted publisher
+
 ## 1.1.0
 
 ### Minor Changes
