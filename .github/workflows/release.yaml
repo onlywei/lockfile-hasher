@@ -36,7 +36,7 @@ jobs:
         uses: changesets/action@v1
         with:
           commit: Run "changeset version"
-          publish: npx changeset publish --provenance
+          publish: npx changeset publish
           title: Run "changeset version"
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
