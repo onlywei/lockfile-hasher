@@ -27,5 +27,14 @@ jobs:
       - name: Install dependencies
         run: pnpm install
 
-      - name: Run CI
-        run: pnpm run ci
+      - name: Run unit tests
+        run: pnpm test
+
+      - name: Lint
+        run: pnpm lint
+
+      - name: Check formatting
+        run: pnpm format:check
+
+      - name: Build
+        run: pnpm build
