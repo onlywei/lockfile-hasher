@@ -2,13 +2,25 @@
   "name": "lockfile-hasher",
   "version": "1.1.5",
   "description": "Generates a combined hash of all the lockfiles in a repository",
-  "main": "dist/index.js",
-  "types": "dist/index.d.ts",
-  "type": "module",
-  "packageManager": "pnpm@10.26.2+sha512.0e308ff2005fc7410366f154f625f6631ab2b16b1d2e70238444dd6ae9d630a8482d92a451144debc492416896ed16f7b114a86ec68b8404b2443869e68ffda6",
+  "keywords": [
+    "gitlab"
+  ],
+  "homepage": "https://github.com/onlywei/lockfile-hasher#readme",
+  "bugs": {
+    "url": "https://github.com/onlywei/lockfile-hasher/issues"
+  },
+  "license": "MIT",
+  "author": "Wei Wang <wei@fastmail.com>",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/onlywei/lockfile-hasher.git"
+  },
   "files": [
     "dist"
   ],
+  "type": "module",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
   "scripts": {
     "build": "rm -rf dist && tsc",
     "lint": "oxlint .",
@@ -17,19 +29,6 @@
     "prepublishOnly": "pnpm build",
     "test": "node --test"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/onlywei/lockfile-hasher.git"
-  },
-  "keywords": [
-    "gitlab"
-  ],
-  "author": "Wei Wang <wei@fastmail.com>",
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/onlywei/lockfile-hasher/issues"
-  },
-  "homepage": "https://github.com/onlywei/lockfile-hasher#readme",
   "dependencies": {
     "glob": "^13.0.0"
   },
@@ -39,5 +38,6 @@
     "oxfmt": "^0.21.0",
     "oxlint": "^1.36.0",
     "typescript": "^5.9.3"
-  }
+  },
+  "packageManager": "pnpm@10.26.2+sha512.0e308ff2005fc7410366f154f625f6631ab2b16b1d2e70238444dd6ae9d630a8482d92a451144debc492416896ed16f7b114a86ec68b8404b2443869e68ffda6"
 }
