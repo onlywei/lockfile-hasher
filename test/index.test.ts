@@ -41,16 +41,16 @@ describe('generatePackageLockHash', () => {
     const hash1 = await generateCombinedLockFileHash(fakeTestRepoDir);
 
     const packageALock = path.resolve(fakeTestRepoDir, 'packages/package-a/package-lock.json');
-    const originalContents = await readFile(packageALock, 'utf-8');
+    const originalContents = await readFile(packageALock, 'utf8');
     const parsed = JSON.parse(originalContents);
     parsed.name = 'modified-package-a';
-    await writeFile(packageALock, JSON.stringify(parsed), 'utf-8');
+    await writeFile(packageALock, JSON.stringify(parsed), 'utf8');
     const hash2 = await generateCombinedLockFileHash(fakeTestRepoDir);
 
     try {
       assert.notEqual(hash1, hash2);
     } finally {
-      await writeFile(packageALock, originalContents, 'utf-8');
+      await writeFile(packageALock, originalContents, 'utf8');
     }
   });
 });
