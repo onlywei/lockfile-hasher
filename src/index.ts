@@ -28,7 +28,7 @@ export async function generateCombinedLockFileHash(rootPath: string): Promise<st
   });
 
   // Sort the entries to ensure consistent hash
-  const sortedEntries = Object.entries(hashesMap).sort(([pathA], [pathB]) => {
+  const sortedEntries = Object.entries(hashesMap).toSorted(([pathA], [pathB]) => {
     return pathA.localeCompare(pathB);
   });
 
