@@ -24,6 +24,7 @@
   "scripts": {
     "build": "rm -rf dist && tsc",
     "lint": "oxlint .",
+    "lint:fix": "oxlint --fix .",
     "format:check": "oxfmt --check .",
     "format": "oxfmt --write .",
     "prepublishOnly": "pnpm build",
