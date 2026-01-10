@@ -1,5 +1,11 @@
 # lockfile-hasher
 
+## 1.1.6
+
+### Patch Changes
+
+- 6ae8f0a: Use .toSorted() instead of .sort(), as caught by oxlint
+
 ## 1.1.5
 
 ### Patch Changes
